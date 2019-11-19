@@ -1,0 +1,23 @@
+body {
+    background-image: url(https://wallpaperaccess.com/full/235784.jpg);
+    /*linear-gradient(45deg, rgba(1, 1, 107, 0.849), red);*/
+    color: white;
+}
+
+form {
+    color: white;
+    background-color: rgba(24, 23, 23, 0.733);
+    position: center;
+    text-align: left;
+    margin: 5em auto;
+    width: 320px;
+    border-radius: 10px;
+    border: 1px color rgba(255, 255, 255, 0.651);
+    height: 591px;
+}
+
+form div {
+    margin: auto;
+    height: 50px;
+    width: 300px;
+}
