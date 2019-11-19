@@ -1,21 +1,26 @@
 body {
     background-image: url("../img/escola.png");
     background-repeat: no-repeat;
-    width: 100%;
+    background-size: 100%;
 }
 
 form {
     color: white;
-    background-color: rgba(24, 23, 23, 0.733);
+    background-color: rgba(24, 23, 23, 0.63);
     text-align: left;
     margin: 5em auto;
-    width: 320px;
+    width: 330px;
     border-radius: 10px;
     height: 281px;
+    position: center;
 }
 
 form div {
     margin: auto;
     height: 50px;
     width: 300px;
+}
+
+#button {
+    position: center;
 }
