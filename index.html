@@ -22,24 +22,32 @@ Docente: Wesley Batista
     <title>Aluno Online</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <form>
-        <div id="logo">
-            <img src="./img/logo-site1.png"></br>
-        </div>
-        </br>
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Usuário"></br>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Senha">
+    <div class="container">
+        <form>
+            <div id="logo">
+                <img src="./img/unidesc.png">
             </div>
-    </form>
-    <div class="buttom">
-        <button type="button" class="btn btn-success">Entrar</button>
+
+            <div class=" input-container" id="format">
+                <i class="fa fa-user icon "></i>
+                <input class="input-field " class="form-control" type="text " placeholder="Usuario " name="usrnm ">
+            </div>
+            </br>
+            <div class="input-container" id="format">
+                <i class="fa fa-key icon "></i>
+                <input class="input-field " class="form-control" type="password" placeholder="Senha " name="psw ">
+            </div>
+            </br>
+            <div id="format">
+                <button type="submit " class="btn btn-primary btn-lg ">Entrar</button>
+            </div>
+
+        </form>
     </div>
 
 </body>
