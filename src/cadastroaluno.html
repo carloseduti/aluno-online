@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <title>Aluno Online</title>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Unidesc</h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-university"></i>Home</a></li>
+                <li><a href="#"><i class="fas fa-user-graduate"></i>Alunos</a></li>
+                <li><a href="#"><i class="fas fa-chalkboard-teacher"></i>Professores</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>Disciplinas</a></li>
+                <li><a href="#"><i class="fas fa-blog"></i>Dúvidas Frequentes</a></li>
+                <li><a href="#"><i class="fas fa-address-book"></i>Contato</a></li>
+            </ul>
+            <div class="social_media">
+                <a href="https://www.facebook.com/unidesc" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/unidesc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/unidesc" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="header">
+                <h3>Cadastro de Alunos</h3>
+            </div>
+            <div class="info">
+                <div>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputEmail4">Nome Completo</label>
+                                <input type="text" class="form-control" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputPassword4">CPF</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">NºMatricula</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputCity">Endereço</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputZip">E-mail</label>
+                                <input type="email" class="form-control" id="inputZip">
+                            </div>
+
+                        </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+                </form>
+
+                <div>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Ações</th>
+                                <th scope="col">NºMatricula</th>
+                                <th scope="col">Nome do Aluno</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+</html>
