@@ -8,13 +8,7 @@
     function cadastrarAlunoController($scope) {
         var vm = this;
         vm.index = -1;
-        //dados da tela
-        vm.nome = {};
-        vm.cpf = {};
-        vm.endereco = {};
-        vm.matricula = {};
-        vm.email = {};
-
+        vm.aluno = {};
         vm.alunos = [];
 
 
@@ -29,29 +23,14 @@
             vm.index = -1;
         };
 
-        /*
+
         vm.editarAluno = function(item) {
-
-            vm.nome = angular.copy(vm.alunos[item]);
-            vm.cpf = angular.copy(vm.alunos[item]);
-            vm.emdereco = angular.copy(vm.alunos[item]);
-            vm.matricula = angular.copy(vm.alunos[item]);
-            vm.email = angular.copy(vm.alunos[item]);
-
+            vm.aluno = angular.copy(vm.alunos[item]);
             vm.index = item;
         };
         vm.deletarAluno = function(item) {
             vm.alunos.splice(item, 1);
         };
 
-        function limparTela($scope) {
-            vm.nome = {};
-            vm.cpf = {};
-            vm.endereco = {};
-            vm.matricula = {};
-            vm.email = {};
-            vm.index = -1;
-        }
-        */
     }
 }());

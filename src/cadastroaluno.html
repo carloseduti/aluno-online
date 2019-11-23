@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/cadastroaluno.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title>Aluno Online</title>
 </head>
 
@@ -47,23 +46,23 @@
                             </div>
                             <div class="form-group col-md-1">
                                 <label for="inputZip">NºMatricula</label>
-                                <input type="text" class="form-control" id="inputZip" ng-model="vm.aluno.matricula">
+                                <input type="text" class="form-control" id="inputZip" placeholder="NºMatricula" ng-model="vm.aluno.matricula">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label for="inputCity">Endereço</label>
-                                <input type="text" class="form-control" id="inputCity" ng-model="vm.aluno.endereco">
+                                <input type="text" class="form-control" id="inputCity" placeholder="Endereço" ng-model="vm.aluno.endereco">
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="inputZip">E-mail</label>
-                                <input type="email" class="form-control" id="inputZip" ng-model="vm.aluno.email">
+                                <input type="email" class="form-control" id="inputZip" placeholder="E-mail" ng-model="vm.aluno.email">
                             </div>
 
                         </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary" ng-disable="" ng-click="vm.adicionarAluno">Cadastrar Aluno</button>
+                    <button type="submit" class="btn btn-primary" ng-disable="!vm.aluno.nome || !vm.aluno.matricula || !vm.aluno.cpf || !vm.aluno.email" ng-click="vm.adicionarAluno()">Cadastrar Aluno</button>
                 </div>
                 </form>
 
@@ -80,36 +79,19 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="aluno in vm.alunos track by $index">
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td>{{aluno.matricula}}</td>
+                                <td>{{aluno.nome}}</td>
+                                <td>{{aluno.cpf}}</td>
+                                <td>{{aluno.email}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="navegacao">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
         <script type="text/javaScript " src="/node_modules/angular/angular.min.js "></script>
         <script type="text/javaScript " src="/app/app.js "></script>
         <script type="text/javaScript " src="/app/controllers.js "></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
 </html>
