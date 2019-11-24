@@ -67,7 +67,8 @@
                         </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary" ng-click="vm.adicionarAlunos()">Cadastrar Aluno</button>
+                    <button type="submit" class="btn btn-primary" ng-click="vm.adicionarAlunos()">Cadastrar</button>
+                    <button type="button" class="btn btn-secondary" ng-click="">Limpar</button>
                 </div>
                 </form>
 
@@ -84,7 +85,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="aluno in vm.alunos track by $index">
-                                <td>{{}}</td>
+                                <td><i class="far fa-edit" ng-click="vm.editarAluno"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarAluno()"></i></td>
                                 <td>{{aluno.matricula}}</td>
                                 <td>{{aluno.nome}}</td>
                                 <td>{{aluno.cpf}}</td>
