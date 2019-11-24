@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     hostname: 'localhost',
-                    port: 8081
+                    port: 8085
                 }
             }
         },
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.zip'
                 },
                 files: [{
-                    src: ['index.html'],
+                    src: ['cadastroaluno.html'],
                     dest: '/'
                 }, {
                     src: ['dist/**'],

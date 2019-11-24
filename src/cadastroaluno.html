@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/cadastroaluno.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script type="text/javaScript " src="/node_modules/angular/angular.min.js"></script>
+    <script type="text/javaScript " src="/app/app.js "></script>
+    <script type="text/javaScript " src="/app/controllers.js "></script>
+
     <title>Aluno Online</title>
 </head>
 
 <body ng-controller="cadastrarAlunoController as vm">
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
     <div class="wrapper">
         <div class="sidebar">
@@ -41,28 +46,28 @@
                                 <input type="text" class="form-control" placeholder="Nome" ng-model="vm.aluno.nome">
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="inputPassword4">CPF</label>
+                                <label>CPF</label>
                                 <input type="text" class="form-control" ng-model="vm.aluno.cpf">
                             </div>
                             <div class="form-group col-md-1">
-                                <label for="inputZip">NºMatricula</label>
-                                <input type="text" class="form-control" id="inputZip" placeholder="NºMatricula" ng-model="vm.aluno.matricula">
+                                <label>NºMatricula</label>
+                                <input type="text" class="form-control" placeholder="NºMatricula" ng-model="vm.aluno.matricula">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <label for="inputCity">Endereço</label>
-                                <input type="text" class="form-control" id="inputCity" placeholder="Endereço" ng-model="vm.aluno.endereco">
+                                <label>Endereço</label>
+                                <input type="text" class="form-control" placeholder="Endereço" ng-model="vm.aluno.endereco">
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputZip">E-mail</label>
-                                <input type="email" class="form-control" id="inputZip" placeholder="E-mail" ng-model="vm.aluno.email">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" placeholder="E-mail" ng-model="vm.aluno.email">
                             </div>
 
                         </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary" ng-disable="!vm.aluno.nome || !vm.aluno.matricula || !vm.aluno.cpf || !vm.aluno.email" ng-click="vm.adicionarAluno()">Cadastrar Aluno</button>
+                    <button type="submit" class="btn btn-primary" ng-click="vm.adicionarAlunos()">Cadastrar Aluno</button>
                 </div>
                 </form>
 
@@ -79,6 +84,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="aluno in vm.alunos track by $index">
+                                <td>{{}}</td>
                                 <td>{{aluno.matricula}}</td>
                                 <td>{{aluno.nome}}</td>
                                 <td>{{aluno.cpf}}</td>
@@ -89,9 +95,6 @@
                 </div>
             </div>
         </div>
-        <script type="text/javaScript " src="/node_modules/angular/angular.min.js "></script>
-        <script type="text/javaScript " src="/app/app.js "></script>
-        <script type="text/javaScript " src="/app/controllers.js "></script>
 </body>
 
 </html>

@@ -9,10 +9,18 @@
         var vm = this;
         vm.index = -1;
         vm.aluno = {};
-        vm.alunos = [];
+        vm.alunos = [{
+            acoes: "",
+            matricula: "UNI8080",
+            nome: "Carlos Eduardo Feitosa da Costa",
+            cpf: "04680698101",
+            email: "carlos@hotmail.com",
+
+        }];
 
 
         vm.adicionarAlunos = function() {
+            console.log(vm.aluno);
             if (vm.index === -1) {
                 vm.alunos.push(vm.aluno);
             } else {
