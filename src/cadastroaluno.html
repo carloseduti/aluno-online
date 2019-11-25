@@ -36,18 +36,19 @@
         <div class="main_content">
             <div class="header">
                 <h3>Cadastro de Alunos</h3>
+                <a href="../index.html"><i  class="fas fa-sign-out-alt fa-2x"></i></a>
             </div>
             <div class="info">
                 <div>
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <label for="inputEmail4">Nome Completo</label>
+                                <label>Nome Completo</label>
                                 <input type="text" class="form-control" placeholder="Nome" ng-model="vm.aluno.nome">
                             </div>
                             <div class="form-group col-md-2">
                                 <label>CPF</label>
-                                <input type="text" class="form-control" ng-model="vm.aluno.cpf">
+                                <input type="text" class="form-control" placeholder="CPF" ng-model="vm.aluno.cpf">
                             </div>
                             <div class="form-group col-md-1">
                                 <label>NºMatricula</label>
@@ -67,8 +68,9 @@
                         </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary" ng-click="vm.adicionarAlunos()">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary" ng-disable="!vm.aluno.nome || !vm.aluno.cpf || !vm.aluno.matricula || !vm.aluno.email" ng-click="vm.adicionarAlunos()">Cadastrar</button>
                     <button type="button" class="btn btn-secondary" ng-click="">Limpar</button>
+                    <button type="button" class="btn btn-danger">Voltar</button>
                 </div>
                 </form>
 
@@ -85,7 +87,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="aluno in vm.alunos track by $index">
-                                <td><i class="far fa-edit" ng-click="vm.editarAluno"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarAluno()"></i></td>
+                                <td><i class="far fa-edit" ng-click="vm.editarAluno($index)"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarAluno($index)"></i></td>
                                 <td>{{aluno.matricula}}</td>
                                 <td>{{aluno.nome}}</td>
                                 <td>{{aluno.cpf}}</td>

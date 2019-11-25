@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-.navegacao {
-    position: relative;
-    bottom: -409px;
+.header .fas {
+    float: right !important;
+    margin-right: -9px;
+    margin-right: 5px;
+    margin-top: -40px;
+}
+
+.btn-danger {
+    float: right !important;
+    margin-right: -9px;
+    margin-right: 5px;
 }
 
 

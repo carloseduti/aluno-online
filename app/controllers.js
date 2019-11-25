@@ -9,6 +9,7 @@
         var vm = this;
         vm.index = -1;
         vm.aluno = {};
+
         vm.alunos = [{
             acoes: "",
             matricula: "UNI8080",
