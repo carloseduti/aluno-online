@@ -15,7 +15,8 @@
             matricula: "UNI8080",
             nome: "Carlos Eduardo Feitosa da Costa",
             cpf: "04680698101",
-            email: "carlos@hotmail.com",
+            tel: "(61) 99260-6648",
+            email: "carloseduardoti@hotmail.com"
 
         }];
 
