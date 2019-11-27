@@ -32,7 +32,6 @@
             vm.index = -1;
         };
 
-
         vm.editarAluno = function(item) {
             vm.aluno = angular.copy(vm.alunos[item]);
             vm.index = item;
