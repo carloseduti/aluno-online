@@ -14,7 +14,7 @@
     <title>Aluno Online</title>
 </head>
 
-<body ng-controller="cadastrarAlunoController as vm">
+<body ng-controller="cadastrarAlunoController as vm" ng-init="vm.init()">
 
     <div class="wrapper">
         <div class="sidebar">
@@ -41,59 +41,59 @@
             <div class="info">
                 <div>
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-3">
+                        <div class=" form-row ">
+                            <div class="form-group col-md-3 ">
                                 <label>Nome Completo</label>
-                                <input type="text" class="form-control" placeholder="Nome" ng-model="vm.aluno.nome">
+                                <input type="text " class="form-control " placeholder="Nome " ng-model="vm.aluno.nome ">
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-2 ">
                                 <label>CPF</label>
-                                <input type="text" class="form-control" placeholder="CPF" ng-model="vm.aluno.cpf">
+                                <input type="text " class="form-control " placeholder="CPF " ng-model="vm.aluno.cpf ">
                             </div>
-                            <div class="form-group col-md-1">
+                            <div class="form-group col-md-1 ">
                                 <label>NºMatricula</label>
-                                <input type="text" class="form-control" placeholder="NºMatricula" ng-model="vm.aluno.matricula">
+                                <input type="text " class="form-control " placeholder="NºMatricula " ng-model="vm.aluno.matricula ">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-3">
+                        <div class="form-row ">
+                            <div class="form-group col-md-3 ">
                                 <label>Telefone</label>
-                                <input type="text" class="form-control" placeholder="Telefone" ng-model="vm.aluno.tel">
+                                <input type="text " class="form-control " placeholder="Telefone " ng-model="vm.aluno.tel ">
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-3 ">
                                 <label>E-mail</label>
-                                <input type="email" class="form-control" placeholder="E-mail" ng-model="vm.aluno.email">
+                                <input type="email " class="form-control " placeholder="E-mail " ng-model="vm.aluno.email ">
                             </div>
 
                         </div>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary" ng-disable="!vm.aluno.nome || !vm.aluno.cpf || !vm.aluno.matricula || !vm.aluno.tel" ng-click="vm.adicionarAlunos()">Cadastrar</button>
-                    <button type="submit" class="btn btn-secondary" ng-click="">Limpar</button>
-                    <a href="./menuprincipal.html"><button type="submit" class="btn btn-danger">Voltar</button></a>
+                    <button type="submit " class="btn btn-primary " ng-disable="!vm.aluno.nome || !vm.aluno.cpf || !vm.aluno.matricula || !vm.aluno.tel " ng-click="vm.adicionarAlunos() ">Cadastrar</button>
+                    <button type="submit " class="btn btn-secondary " ng-click=" ">Limpar</button>
+                    <a href="./menuprincipal.html "><button type="submit " class="btn btn-danger ">Voltar</button></a>
                 </div>
                 </form>
 
                 <div>
-                    <table class="table">
-                        <thead class="thead-dark">
+                    <table class="table ">
+                        <thead class="thead-dark ">
                             <tr>
-                                <th scope="col">Ações</th>
-                                <th scope="col">NºMatricula</th>
-                                <th scope="col">Nome do Aluno</th>
-                                <th scope="col">CPF</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">Telefone</th>
+                                <th scope="col ">Ações</th>
+                                <th scope="col ">NºMatricula</th>
+                                <th scope="col ">Nome do Aluno</th>
+                                <th scope="col ">CPF</th>
+                                <th scope="col ">E-mail</th>
+                                <th scope="col ">Telefone</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="aluno in vm.alunos track by $index">
-                                <td><i class="far fa-edit" ng-click="vm.editarAluno($index)"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarAluno($index)"></i></td>
-                                <td>{{aluno.matricula}}</td>
-                                <td>{{aluno.nome}}</td>
-                                <td>{{aluno.cpf}}</td>
-                                <td>{{aluno.email}}</td>
-                                <td>{{aluno.tel}}</td>
+                            <tr ng-repeat="item in vm.alunos track by $index ">
+                                <td><i class="far fa-edit " ng-click="vm.editarAluno($index) "> </i><i class="fas fa-trash-alt " ng-click="vm.deletarAluno($index) "></i></td>
+                                <td>{{item.matricula}}</td>
+                                <td>{{item.nome}}</td>
+                                <td>{{item.cpf}}</td>
+                                <td>{{item.email}}</td>
+                                <td>{{item.tel}}</td>
                             </tr>
                         </tbody>
                     </table>
